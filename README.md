@@ -96,6 +96,14 @@ wget --content-disposition "https://eddie.website/download/?platform=linux&arch=
 sudo dpkg -i airvpn_linux_x64_debian.deb
 ```
 
+## setup Ubuntu 2020-01-28
+
+```Bash
+wget -qO - https://eddie.website/repository/keys/eddie_maintainer_gpg.key | sudo apt-key add -
+sudo add-apt-repository "deb http://eddie.website/repository/apt stable main"
+sudo apt install eddie-ui
+```
+
 ![](media/2016-09-05T1559Z.png)
 
 - A server can be selected (e.g. by country) and connection can start.
