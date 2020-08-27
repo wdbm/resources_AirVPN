@@ -133,6 +133,15 @@ sudo openvpn --config AirVPN_France_TCP-443.ovpn
 - Select "by single servers" and "Advanced Mode" and then select "Resolved hosts in .ovpn file" and "All servers for area or region".
 - `grep "remote " *`
 
+# kill Eddie
+
+```Bash
+killeddie(){
+    process_ID_Eddie="$(ps -ef | grep eddie | grep mono | head -n 1 | awk '{print $2}')"
+    kill -9 "${process_ID_Eddie}"
+}
+```
+
 # links
 
 - [instructions for supported systems](https://airvpn.org/enter)
